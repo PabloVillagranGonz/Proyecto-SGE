@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_managepablo_task,managepablo.task,model_managepablo_task,base.group_user,1,1,1,1
+access_managepablo_sprint,managepablo.sprint,model_managepablo_sprint,base.group_user,1,1,1,1
+access_managepablo_project,managepablo.project,model_managepablo_project,base.group_user,1,1,1,1
+access_managepablo_history,managepablo.history,model_managepablo_history,base.group_user,1,1,1,1
+access_managepablo_technology,managepablo.technology,model_managepablo_technology,base.group_user,1,1,1,1

@@ -1,0 +1,66 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="vista_managepablo_technology_tree">
+      <field name="name">vista_managepablo_technology_tree</field>
+      <field name="model">managepablo.technology</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- Plantilla formulario tipo form      -->
+
+
+    <record model="ir.ui.view" id="vista_managepablo_technology_form">
+      <field name="name">vista_managepablo_technology_form</field>
+      <field name="model">managepablo.technology</field>
+      <field name="arch" type="xml">
+        <form string="formulario_technology" >
+          <sheet>
+            <group name="group_top">
+              <field name="name"/>
+              <field name="description"/>
+              <field name="image"/>
+              <field name="tareas_id"/>
+            </group>
+          </sheet>
+
+        </form>
+      </field>
+    </record> 
+
+
+    <!-- Plantilla action -->
+
+  
+    <record model="ir.actions.act_window" id="accion_managepablo_technology_form">
+      <field name="name">Listado de technology</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">managepablo.technology</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          genero
+        </p>
+        <p> Click <strong> 'Crear' </strong> para añadir nuevos elementos
+         </p>
+      </field>
+    </record>  
+
+
+    <!-- Top menu item -->
+    <menuitem name="Manage de Pablo" id="menu_managepablo_raiz"/>
+ 
+    <!-- menu categories -->
+    <menuitem name="Dirección" id="menu_managepablo_listado" parent="menu_managepablo_raiz"/>
+ 
+    <!-- actions -->
+    <menuitem name="Technology" id="menu_managepablo_technology" parent="menu_managepablo_listado"
+              action="accion_managepablo_technology_form"/>
+    </data>
+</odoo>
